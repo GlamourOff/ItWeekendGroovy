@@ -9,13 +9,13 @@ import java.lang.reflect.Method;
 public class CalculatorRunner {
 
     public static void main(String[] args) {
-        final long PREHEAT = 100 * 1000;
+        final long PREHEAT = 100_000;
         performanceTestJava(PREHEAT);
         testReflectionCall(PREHEAT);
         performanceTestGroovyNoCompile(PREHEAT);
         performanceTestGroovyCompile(PREHEAT);
 
-        final long CNT = 1000 * 1000 * 1000;
+        final long CNT = 1_000_000_000;
         performanceTestJava(CNT);
         testReflectionCall(CNT);
         performanceTestGroovyNoCompile(CNT);
